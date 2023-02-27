@@ -5,7 +5,8 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(
-    new ValidationPipe({ // use validattion pipe globally in our app
+    new ValidationPipe({
+      // use validattion pipe globally in our app
       whitelist: true,
       transform: true,
       forbidNonWhitelisted: true,
