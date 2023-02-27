@@ -1,3 +1,4 @@
+import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 // coffees controller
 import {
@@ -36,8 +37,8 @@ export class CoffeesController {
     return this.coffeesService.create(createCoffeeDto);
   }
   @Patch(':id')
-  update(@Param('id') id: string, @Body() body) {
-    return this.coffeesService.update(id, body);
+  update(@Param('id') id: string, @Body() updateCoffeeDto: UpdateCoffeeDto) {
+    return this.coffeesService.update(id, updateCoffeeDto);
   }
   @Delete(':id')
   remove(@Param('id') id: string) {
