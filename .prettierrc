@@ -1,4 +1,7 @@
 {
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "typescript-config/strict": "off",
+  "typescript-config/consistent-casing": "off"
+  
 }

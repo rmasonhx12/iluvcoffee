@@ -1,3 +1,4 @@
+import { CreateCoffeeDto } from './dto/create-coffee.dto';
 // coffees controller
 import {
   Body,
@@ -31,8 +32,8 @@ export class CoffeesController {
 
   // body decorator
   @Post()
-  create(@Body() body) {
-    return this.coffeesService.create(body);
+  create(@Body() createCoffeeDto: CreateCoffeeDto) {
+    return this.coffeesService.create(createCoffeeDto);
   }
   @Patch(':id')
   update(@Param('id') id: string, @Body() body) {
